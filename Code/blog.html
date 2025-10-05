@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - A Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Menambahkan font-weight 700 untuk navigasi -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+
+<style>
+    /* 1. Pengaturan Dasar dan Variabel CSS */
+    :root {
+        /* Path gambar diperbaiki: keluar dari folder 'Code' (../) lalu masuk ke 'Blog' */
+        --bg-image: url('../Blog/Group 48096130.png');
+        --primary-font: 'Poppins', sans-serif;
+        --display-font: 'Playfair Display', serif;
+        --text-color: #ffffff;
+        --shadow-color: rgba(0, 0, 0, 0.25);
+        --gradient-color: #DC833F; /* Warna dari kode asli Anda */
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--primary-font);
+        color: var(--text-color);
+        background-color: #333;
+        
+        background-image: 
+            radial-gradient(ellipse 100% 140% at 50% 50%, rgba(102, 102, 102, 0.30) 0%, var(--gradient-color) 100%),
+            var(--bg-image);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* Latar belakang tidak ikut scroll */
+        min-height: 100vh;
+    }
+
+    /* === KODE UNTUK HEADER NAVIGASI (DITAMBAHKAN) === */
+    .main-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem 4rem;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 100;
+    }
+
+    .main-nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: clamp(1rem, 1.2vw, 1.25rem);
+        font-weight: 700;
+        margin-left: 2rem;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .main-nav a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--text-color);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+    }
+
+    .main-nav a:hover {
+        color: #ddd;
+    }
+
+    .main-nav a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+    /* 2. Kontainer Utama */
+    .page-container {
+        width: 100%;
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+        padding-top: 10rem; /* Ditambah agar ada ruang untuk header */
+    }
+
+    /* 3. Header Halaman */
+    .page-header {
+        margin-bottom: 4rem;
+    }
+
+    .main-title {
+        font-family: var(--display-font);
+        font-style: italic;
+        font-weight: 700;
+        font-size: clamp(3rem, 5vw + 1rem, 6rem); 
+        text-shadow: 2px 2px 8px var(--shadow-color);
+    }
+
+    .subtitle {
+        font-weight: 200;
+        font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+        text-shadow: 1px 1px 6px var(--shadow-color);
+        margin-left: 0.5rem;
+    }
+
+    /* 4. Daftar Postingan Blog */
+    .blog-posts {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .post-item {
+        display: block;
+        text-decoration: none;
+        color: var(--text-color);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 8px; /* Ditambahkan agar bayangan mengikuti bentuk gambar */
+    }
+
+    .post-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+    }
+    
+    .post-item:hover {
+        transform: translateY(-5px) scale(1.01);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+    
+    /* 5. Media Query untuk Mobile */
+    @media (max-width: 1024px) {
+        .main-header {
+            padding: 1.5rem 1rem;
+            justify-content: center;
+        }
+        .main-nav a {
+            margin: 0 0.75rem;
+            font-size: 0.9rem;
+        }
+        .page-container {
+            padding-top: 8rem;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .page-container {
+            padding: 2rem 1rem;
+            padding-top: 8rem;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .subtitle {
+            margin-left: 0;
+        }
+    }
+</style>
+</head>
+<body>
+    <!-- === KODE UNTUK HEADER NAVIGASI (DITAMBAHKAN) === -->
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="prevwork.html">Previous Works</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="page-container">
+        <header class="page-header">
+            <h1 class="main-title">Blog</h1>
+            <h2 class="subtitle">a portofolio.</h2>
+        </header>
+
+        <main class="blog-posts">
+            <a href="post1.html" class="post-item">
+                <img src="../Blog/Group 48096125.png" alt="Sampul postingan blog pertama">
+            </a>
+            
+            <a href="post2.html" class="post-item">
+                <img src="../Blog/Group 48096126.png" alt="Sampul postingan blog kedua">
+            </a>
+            
+            <a href="post3.html" class="post-item">
+                <img src="../Blog/Group 48096127.png" alt="Sampul postingan blog ketiga">
+            </a>
+        </main>
+    </div>
+</body>
+</html>
+

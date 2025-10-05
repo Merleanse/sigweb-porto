@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGIS UMKM - Pasar Rakyat Jambangan</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Menambahkan font-weight 700 untuk navigasi -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+
+<style>
+    /* 1. Pengaturan Dasar dan Variabel CSS */
+    :root {
+        --bg-image: url('../WebGIS/Group 48096117.png'); 
+        --primary-font: 'Poppins', sans-serif;
+        --display-font: 'Playfair Display', serif;
+        --text-color: #ffffff;
+        --shadow-color: rgba(0, 0, 0, 0.25);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--primary-font);
+        color: var(--text-color);
+        background-color: #333; /* Warna fallback */
+        line-height: 1.6;
+    }
+
+    /* === KODE UNTUK HEADER NAVIGASI (DITAMBAHKAN) === */
+    .main-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem 4rem;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 100;
+    }
+
+    .main-nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: clamp(1rem, 1.2vw, 1.25rem);
+        font-weight: 700;
+        margin-left: 2rem;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .main-nav a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--text-color);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+    }
+
+    .main-nav a:hover {
+        color: #ddd;
+    }
+
+    .main-nav a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+
+    /* 2. Layout Utama yang Responsif */
+    .project-container {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        align-items: center;
+        min-height: 100vh;
+        padding: 4rem;
+        gap: 3rem;
+        
+        background-image: 
+            radial-gradient(ellipse 100% 140% at 50% 50%, rgba(102, 102, 102, 0.30) 0%, #A871E7 100%),
+            var(--bg-image);
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* 3. Penataan Konten Teks */
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Diubah dari space-between */
+        height: 100%;
+    }
+
+    .main-title {
+        font-family: var(--display-font);
+        font-style: italic;
+        font-weight: 700;
+        font-size: clamp(3rem, 5vw + 1rem, 6rem);
+        text-shadow: 2px 2px 8px var(--shadow-color);
+    }
+
+    .subtitle {
+        font-weight: 200;
+        font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+        margin-bottom: 2rem;
+        text-shadow: 1px 1px 6px var(--shadow-color);
+    }
+
+    .description {
+        font-weight: 400;
+        font-size: clamp(1rem, 1.2vw, 1.1rem);
+        text-align: justify;
+        max-width: 65ch;
+    }
+
+    /* 4. Penataan Tombol */
+    .cta-button {
+        width: 100%;
+        max-width: 348px;
+        height: auto;
+        display: block;
+        margin-top: 2rem;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .cta-button:hover {
+        transform: scale(1.05);
+    }
+
+    /* 5. Penataan Gambar */
+    .image-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .project-image {
+        width: 100%;
+        max-width: 780px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        object-fit: cover;
+    }
+
+    /* 6. Media Query untuk Mobile */
+    @media (max-width: 1024px) {
+        .main-header {
+            padding: 1.5rem 2rem;
+            justify-content: center;
+        }
+
+        .main-nav a {
+            margin: 0 1rem;
+        }
+
+        .project-container {
+            grid-template-columns: 1fr;
+            padding: 2rem;
+            padding-top: 8rem; /* Beri ruang untuk header */
+            text-align: center;
+        }
+
+        .text-content {
+            order: 2;
+            align-items: center;
+        }
+
+        .image-content {
+            order: 1;
+        }
+        
+        .description {
+            text-align: center;
+        }
+
+        .cta-button {
+            margin: 2rem auto 0;
+        }
+    }
+</style>
+</head>
+<body>
+    <!-- === KODE UNTUK HEADER NAVIGASI (DITAMBAHKAN) === -->
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="prevwork.html">Previous Works</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="project-container">
+        <div class="text-content">
+            <div>
+                <h1 class="main-title">WebGIS UMKM</h1>
+                <h2 class="subtitle">Pasar Rakyat Jambangan</h2>
+                <p class="description">
+                    Proyek ini berawal dari sebuah visi untuk menjadikan setiap UMKM di Pasar Rakyat Jambangan terintegrasi secara digital. Bekerja sama dengan Dinas Koperasi dan UKM Kota Surabaya, kami mewujudkan visi tersebut melalui sebuah platform WebGIS. Kami tidak sekadar memetakan titik lokasi, tetapi membangun sebuah ekosistem visual. Dengan mengintegrasikan data standee UMKM dan pemetaan orthophoto presisi tinggi, platform ini memberikan gambaran nyata kondisi pasar. Tujuannya secara lugas untuk memberikan alat bantu strategis bagi pelaku usaha, sekaligus menciptakan transparansi spasial yang mendukung pertumbuhan ekonomi lokal secara berkelanjutan, lengkap dengan modul edukasi yang dapat diakses para pelaku UMKM.
+                </p>
+            </div>
+            <a href="https://st16jambangan.netlify.app" target="_blank">
+                <img class="cta-button" src="../WebGIS/button.png" alt="Tombol Kunjungi Situs">
+            </a>
+        </div>
+        <div class="image-content">
+            <img class="project-image" src="../WebGIS/Group 48096113.png" alt="Ilustrasi Proyek WebGIS UMKM">
+        </div>
+    </main>
+</body>
+</html>
+
