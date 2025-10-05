@@ -11,9 +11,10 @@
 
 <style>
     :root {
-        --bg-image: url('/Home Page/BG HP.png'); 
+        /* PERBAIKAN PATH: Hapus spasi dari nama folder untuk praktik terbaik */
+        --bg-image: url('HomePage/BG HP.png'); 
         --primary-font: 'Poppins', sans-serif;
-        --display-font: 'Playfair+Display', serif;
+        --display-font: 'Playfair Display', serif; /* Hapus '+' dari nama font */
         --nav-font: 'Poppins', sans-serif;
         --text-color: #ffffff;
         --shadow-color: rgba(0, 0, 0, 0.35);
@@ -40,6 +41,9 @@
     .page-container {
         display: flex;
         flex-direction: column;
+        /* --- INI PERBAIKANNYA --- */
+        /* Pastikan container ini mengisi setidaknya seluruh tinggi layar */
+        min-height: 100vh;
     }
 
     .main-nav {
@@ -82,7 +86,7 @@
     }
 
     .hero-content {
-        flex-grow: 1;
+        flex-grow: 1; /* Akan mengambil semua ruang ekstra yang tersedia */
         display: flex;
         flex-direction: column;
         justify-content: center;
