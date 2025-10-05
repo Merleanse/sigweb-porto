@@ -10,17 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@200;400;800&display=swap" rel="stylesheet">
 
 <style>
-    /* 1. Pengaturan Dasar dan Variabel CSS */
     :root {
-        /* Path gambar diperbaiki: keluar dari folder 'Code' (../) lalu masuk ke 'AboutMe' */
         --bg-image: url('../AboutMe/Group 48096149.png');
-        /* PERBAIKAN: Nama folder diubah dari 'About-Me' menjadi 'AboutMe' */
         --side-image: url('../AboutMe/Group 48096148.png');
         --primary-font: 'Poppins', sans-serif;
         --display-font: 'Playfair Display', serif;
         --text-color: #ffffff;
         --shadow-color: rgba(0, 0, 0, 0.25);
-        --gradient-color: #DC833F; /* Warna dari kode asli Anda */
+        --gradient-color: #DC833F; 
     }
 
     * {
@@ -33,14 +30,14 @@
         font-family: var(--primary-font);
         color: var(--text-color);
         background-color: #333;
-        line-height: 1.7; /* Sedikit lebih lega untuk teks panjang */
+        line-height: 1.7; 
         overflow-x: hidden;
     }
 
-    /* 2. Layout Utama dengan CSS Grid */
+ 
     .about-container {
         display: grid;
-        grid-template-columns: 1.2fr 1fr; /* Kolom teks lebih lebar */
+        grid-template-columns: 1.2fr 1fr; 
         align-items: center;
         min-height: 100vh;
         
@@ -51,7 +48,6 @@
         background-position: center;
     }
 
-    /* 3. Penataan Konten Teks */
     .text-content {
         display: flex;
         flex-direction: column;
@@ -70,11 +66,10 @@
     .subtitle {
         font-weight: 200;
         font-size: clamp(1.5rem, 2.5vw, 2.2rem);
-        margin-bottom: 2.5rem; /* Jarak lebih besar sebelum biodata */
+        margin-bottom: 2.5rem; 
         text-shadow: 1px 1px 6px var(--shadow-color);
     }
 
-    /* Penataan Khusus untuk Biodata */
     .bio-content {
         font-size: clamp(1rem, 1.2vw, 1.1rem);
         max-width: 65ch;
@@ -86,31 +81,30 @@
     
     .bio-section h3 {
         font-weight: 800;
-        font-size: 1em; /* Ukuran sama dengan teks biasa tapi tebal */
+        font-size: 1em; 
         margin-bottom: 0.25rem;
     }
 
     .bio-section p, .bio-section ul {
         font-weight: 400;
-        list-style: none; /* Hilangkan bullet points */
+        list-style: none; 
     }
     
-    /* Grid untuk detail personal (Nama, TTL, NRP) */
     .personal-details {
         display: grid;
-        grid-template-columns: auto 1fr; /* Kolom label, lalu kolom isi */
-        gap: 0.25rem 1rem; /* Jarak vertikal dan horizontal */
+        grid-template-columns: auto 1fr; 
+        gap: 0.25rem 1rem; 
         margin-bottom: 1.5rem;
     }
-    .personal-details dt { /* dt = label */
+    .personal-details dt { 
         font-weight: 800;
     }
-    .personal-details dd { /* dd = isi */
+    .personal-details dd { 
         font-weight: 400;
     }
 
 
-    /* 4. Penataan Gambar Samping */
+
     .image-content {
         height: 100vh;
         width: 100%;
@@ -118,11 +112,10 @@
         background-size: cover;
         background-position: center;
     }
-    
-    /* 5. Media Query untuk Tablet dan Mobile */
+   
     @media (max-width: 1024px) {
         .about-container {
-            grid-template-columns: 1fr; /* Jadi 1 kolom */
+            grid-template-columns: 1fr;
         }
 
         .text-content {
@@ -132,11 +125,11 @@
         }
 
         .image-content {
-            display: none; /* Sembunyikan gambar samping di mobile agar fokus ke teks */
+            display: none; 
         }
         
         .personal-details {
-            grid-template-columns: 1fr; /* Detail personal jadi 1 kolom */
+            grid-template-columns: 1fr;
             text-align: center;
             gap: 0.5rem;
         }
@@ -179,8 +172,6 @@
                 </div>
             </div>
         </div>
-        
-        <!-- Gambar samping kini menjadi background-image dari div ini -->
         <div class="image-content"></div>
     </main>
 </body>

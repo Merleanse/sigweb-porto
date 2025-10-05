@@ -10,16 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
 
 <style>
-    /* 1. Pengaturan Dasar dan Variabel CSS */
     :root {
-        /* Path gambar diperbaiki: keluar dari folder 'Code' (../) lalu masuk ke 'Blog/Blog 2' */
         --bg-image: url('../Blog/Blog 2/Group 48096117.png');
         --side-image: url('../Blog/Blog 2/Group 48096151.png');
         --primary-font: 'Poppins', sans-serif;
         --display-font: 'Playfair Display', serif;
         --text-color-light: #ffffff;
         --text-color-dark: #222222;
-        --gradient-color: #1973D9; /* Warna dari kode asli Anda */
+        --gradient-color: #1973D9; 
         --shadow-color: rgba(0, 0, 0, 0.15);
     }
 
@@ -33,17 +31,17 @@
         font-family: var(--primary-font);
         color: var(--text-color-dark);
         background-color: #f0f2f5;
-        line-height: 1.8; /* Jarak antar baris yang nyaman untuk membaca */
+        line-height: 1.8; 
     }
 
-    /* 2. Layout Utama dengan CSS Grid */
+
     .article-container {
         display: grid;
-        grid-template-columns: 1.2fr 1fr; /* Kolom teks sedikit lebih lebar */
+        grid-template-columns: 1.2fr 1fr; 
         min-height: 100vh;
     }
 
-    /* 3. Konten Artikel (Kolom Kiri) */
+
     .article-content {
         padding: 5rem;
         background-color: #ffffff;
@@ -72,14 +70,14 @@
     
     .article-body {
         font-size: clamp(1rem, 1.1vw, 1.15rem);
-        max-width: 65ch; /* Lebar ideal untuk kenyamanan membaca */
+        max-width: 65ch; 
     }
     
     .article-body p {
         margin-bottom: 1.5rem;
     }
 
-    /* 4. Gambar Samping (Kolom Kanan) */
+
     .side-image-container {
         background-image: 
             radial-gradient(ellipse 100% 140% at 50% 50%, rgba(102,102,102,0.3) 0%, var(--gradient-color) 100%),
@@ -87,14 +85,13 @@
         background-size: cover;
         background-position: center;
         min-height: 100vh;
-        position: sticky; /* Membuat gambar tetap terlihat saat scroll */
+        position: sticky; 
         top: 0;
     }
-    
-    /* 5. Media Query untuk Mobile */
+
     @media (max-width: 1024px) {
         .article-container {
-            grid-template-columns: 1fr; /* Ubah menjadi 1 kolom */
+            grid-template-columns: 1fr; 
         }
         
         .article-content {
@@ -102,7 +99,7 @@
         }
 
         .side-image-container {
-            display: none; /* Sembunyikan gambar samping di mobile */
+            display: none; 
         }
     }
 </style>

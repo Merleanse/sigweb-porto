@@ -7,13 +7,10 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Menambahkan font-weight 700 untuk navigasi -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
-    /* 1. Pengaturan Dasar dan Variabel CSS */
     :root {
-        /* Path gambar diperbaiki: keluar dari folder 'Code' (../) lalu masuk ke folder 'Contact' */
         --bg-image: url('../Contact/Group 48096128.png');
         --primary-font: 'Poppins', sans-serif;
         --display-font: 'Playfair Display', serif;
@@ -35,7 +32,7 @@
         overflow-x: hidden;
     }
     
-    /* === KODE UNTUK HEADER NAVIGASI (DITAMBAHKAN) === */
+
     .main-header {
         position: absolute;
         top: 0;
@@ -79,11 +76,10 @@
         transform-origin: bottom left;
     }
 
-    /* 2. Kontainer Utama dengan Flexbox */
     .contact-container {
         display: flex;
         align-items: center;
-        justify-content: flex-end; /* Dorong konten ke kanan */
+        justify-content: flex-end; 
         min-height: 100vh;
         
         background-image: 
@@ -94,7 +90,6 @@
         padding: 4rem;
     }
 
-    /* 3. Kotak Konten Kontak */
     .contact-content {
         display: flex;
         flex-direction: column;
@@ -112,7 +107,6 @@
         margin-bottom: 3rem;
     }
 
-    /* 4. Daftar Informasi Kontak */
     .contact-list {
         list-style: none;
         padding: 0;
@@ -137,7 +131,7 @@
     }
     
     .contact-item.no-hover:hover {
-        transform: none; /* Khusus untuk item yang tidak bisa diklik */
+        transform: none; 
         cursor: default;
     }
 
@@ -147,7 +141,7 @@
         flex-shrink: 0;
     }
     
-    /* 5. Media Query untuk Mobile */
+
      @media (max-width: 1024px) {
         .main-header {
             padding: 1.5rem 1rem;
@@ -164,7 +158,7 @@
 
     @media (max-width: 768px) {
         .contact-container {
-            justify-content: center; /* Konten di tengah di mobile */
+            justify-content: center; 
             padding: 2rem;
             padding-top: 8rem;
             text-align: center;
@@ -187,7 +181,6 @@
 </style>
 </head>
 <body>
-    <!-- === KODE UNTUK HEADER NAVIGASI (DITAMBAHKAN) === -->
     <header class="main-header">
         <nav class="main-nav">
             <a href="index.html">Home</a>
@@ -203,15 +196,13 @@
             <h1 class="main-title">Contact Me!</h1>
 
             <ul class="contact-list">
-                <!-- Email (tidak bisa diklik) -->
                 <li>
                     <div class="contact-item no-hover">
                         <img class="contact-icon" src="../Contact/email.png" alt="Ikon Email">
                         <span>5016221045@student.its.ac.id</span>
                     </div>
                 </li>
-                
-                <!-- WhatsApp (bisa diklik) -->
+
                 <li>
                     <a href="https://wa.me/628118111628" target="_blank" class="contact-item">
                         <img class="contact-icon" src="../Contact/wangsaf.png" alt="Ikon WhatsApp">
@@ -219,7 +210,6 @@
                     </a>
                 </li>
 
-                <!-- Instagram (bisa diklik) -->
                 <li>
                     <a href="https://instagram.com/ra.merlin" target="_blank" class="contact-item">
                         <img class="contact-icon" src="../Contact/insta.png" alt="Ikon Instagram">

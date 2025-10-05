@@ -7,13 +7,11 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Menambahkan font-weight 700 untuk navigasi -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
 
 <style>
-    /* 1. Pengaturan Dasar dan Variabel CSS */
     :root {
-        /* Path diperbaiki: keluar dari folder 'Code', lalu masuk ke folder 'Siteplan' */
+
         --bg-image: url('../Siteplan/Group 48096117.png'); 
         --primary-font: 'Poppins', sans-serif;
         --display-font: 'Playfair Display', serif;
@@ -30,11 +28,10 @@
     body {
         font-family: var(--primary-font);
         color: var(--text-color);
-        background-color: #333; /* Warna fallback */
+        background-color: #333; 
         line-height: 1.6;
     }
 
-    /* === KODE UNTUK HEADER NAVIGASI (DITAMBAHKAN) === */
     .main-header {
         position: absolute;
         top: 0;
@@ -78,7 +75,6 @@
         transform-origin: bottom left;
     }
 
-    /* 2. Layout Utama yang Responsif */
     .project-container {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
@@ -94,7 +90,7 @@
         background-position: center;
     }
 
-    /* 3. Penataan Konten Teks */
+
     .text-content {
         display: flex;
         flex-direction: column;
@@ -123,7 +119,7 @@
         max-width: 65ch;
     }
 
-    /* 4. Penataan Gambar */
+
     .image-content {
         display: flex;
         justify-content: center;
@@ -139,7 +135,7 @@
         object-fit: cover;
     }
 
-    /* 5. Media Query untuk Mobile */
+   
     @media (max-width: 1024px) {
         .main-header {
             padding: 1.5rem 2rem;
@@ -153,7 +149,7 @@
         .project-container {
             grid-template-columns: 1fr;
             padding: 2rem;
-            padding-top: 8rem; /* Memberi ruang untuk header */
+            padding-top: 8rem; 
             text-align: center;
         }
 
@@ -173,7 +169,6 @@
 </style>
 </head>
 <body>
-    <!-- === KODE UNTUK HEADER NAVIGASI (DITAMBAHKAN) === -->
     <header class="main-header">
         <nav class="main-nav">
             <a href="index.html">Home</a>
