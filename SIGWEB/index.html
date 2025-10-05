@@ -11,10 +11,11 @@
 
 <style>
     :root {
-        /* PERBAIKAN PATH: Hapus spasi dari nama folder untuk praktik terbaik */
-        --bg-image: url('HomePage/BG HP.png'); 
+        /* --- INI PERBAIKANNYA --- */
+        /* Spasi dalam nama folder dan file diubah menjadi %20 agar valid sebagai URL */
+        --bg-image: url('Home%20Page/BG%20HP.png'); 
         --primary-font: 'Poppins', sans-serif;
-        --display-font: 'Playfair Display', serif; /* Hapus '+' dari nama font */
+        --display-font: 'Playfair Display', serif;
         --nav-font: 'Poppins', sans-serif;
         --text-color: #ffffff;
         --shadow-color: rgba(0, 0, 0, 0.35);
@@ -41,8 +42,6 @@
     .page-container {
         display: flex;
         flex-direction: column;
-        /* --- INI PERBAIKANNYA --- */
-        /* Pastikan container ini mengisi setidaknya seluruh tinggi layar */
         min-height: 100vh;
     }
 
@@ -86,7 +85,7 @@
     }
 
     .hero-content {
-        flex-grow: 1; /* Akan mengambil semua ruang ekstra yang tersedia */
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -155,3 +154,4 @@
     </div>
 </body>
 </html>
+
