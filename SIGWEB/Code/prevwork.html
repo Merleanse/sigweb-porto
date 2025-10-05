@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previous Works - A Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --bg-image: url('/PreviousWorks/Group 48096129.png'); 
+        --primary-font: 'Poppins', sans-serif;
+        --display-font: 'Playfair Display', serif;
+        --text-color: #ffffff;
+        --shadow-color: rgba(0, 0, 0, 0.25);
+        --gradient-color: #DC833F;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--primary-font);
+        color: var(--text-color);
+        min-height: 100vh;
+        overflow-x: hidden;
+        
+        background-image: 
+            radial-gradient(ellipse 100% 140% at 50% 50%, rgba(102, 102, 102, 0.30) 0%, var(--gradient-color) 100%),
+            var(--bg-image);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+
+
+    .main-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 2rem 4rem;
+        display: flex;
+        justify-content: flex-end;
+        z-index: 100;
+    }
+
+    .main-nav a {
+        color: var(--text-color);
+        text-decoration: none;
+        font-size: clamp(1rem, 1.2vw, 1.25rem);
+        font-weight: 700;
+        margin-left: 2rem;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+
+    .main-nav a::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: -5px;
+        left: 0;
+        background-color: var(--text-color);
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+    }
+
+    .main-nav a:hover {
+        color: #ddd;
+    }
+
+    .main-nav a:hover::after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+
+
+
+    .portfolio-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 4rem 2rem;
+        padding-top: 10rem; 
+    }
+
+
+    .header {
+        text-align: center;
+        margin-bottom: 4rem;
+    }
+
+    .main-title {
+        font-family: var(--display-font);
+        font-style: italic;
+        font-weight: 700;
+        font-size: clamp(3rem, 5vw + 1rem, 6rem);
+        text-shadow: 2px 2px 8px var(--shadow-color);
+    }
+
+    .subtitle {
+        font-weight: 200;
+        font-size: clamp(1.5rem, 2.5vw, 2.2rem);
+        text-shadow: 1px 1px 6px var(--shadow-color);
+        margin-top: -1rem;
+    }
+
+    .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    .gallery-item a {
+        display: block;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item a:hover {
+        transform: scale(1.05) translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .gallery-item img {
+        display: block;
+        max-height: 60vh;
+        height: auto;
+        width: auto;
+        max-width: 100%;
+        border-radius: 8px;
+    }
+    
+    @media (max-width: 1024px) {
+        .main-header {
+            padding: 1.5rem 1rem;
+            justify-content: center;
+        }
+        .main-nav a {
+            margin: 0 0.75rem;
+            font-size: 0.9rem;
+        }
+        .portfolio-container {
+            padding-top: 8rem;
+        }
+    }
+
+</style>
+</head>
+<body>
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="prevwork.html">Previous Works</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main class="portfolio-container">
+        <header class="header">
+            <h1 class="main-title">Previous Works</h1>
+            <h2 class="subtitle">a portofolio.</h2>
+        </header>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <a href="webgis.html">
+                    <img src="/PreviousWorks/WebGIS.png" alt="Proyek WebGIS">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="siteplan.html">
+                    <img src="/PreviousWorks/Siteplan.png" alt="Proyek Siteplan">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="w130.html">
+                    <img src="/PreviousWorks/W130.png" alt="Proyek W130">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="pargantara.html">
+                    <img src="/PreviousWorks/Pargantara.png" alt="Proyek Pargantara">
+                </a>
+            </div>
+
+            <div class="gallery-item">
+                <a href="vidprof.html">
+                    <img src="/PreviousWorks/Vid[prof.png" alt="Proyek Video Profile">
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+

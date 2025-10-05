@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI dan Manusia - Blog</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --bg-image: url('/Blog/Blog 1/Group 48096117.png');
+        --side-image: url('/Blog/Blog 1/Group 48096150.png');
+        --primary-font: 'Poppins', sans-serif;
+        --display-font: 'Playfair Display', serif;
+        --text-color-light: #ffffff;
+        --text-color-dark: #222222;
+        --gradient-color: #5295E4;
+        --shadow-color: rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--primary-font);
+        color: var(--text-color-dark);
+        background-color: #f0f2f5;
+        line-height: 1.8; 
+    }
+
+    .article-container {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr; 
+        min-height: 100vh;
+    }
+
+
+    .article-content {
+        padding: 5rem;
+        background-color: #ffffff;
+    }
+
+    .article-header {
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .main-title {
+        font-family: var(--display-font);
+        font-style: italic;
+        font-weight: 700;
+        font-size: clamp(2.5rem, 5vw, 4rem); 
+        color: var(--gradient-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+        font-weight: 200;
+        font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+        color: #555;
+    }
+    
+    .article-body {
+        font-size: clamp(1rem, 1.1vw, 1.15rem);
+        max-width: 65ch; 
+    }
+    
+    .article-body p {
+        margin-bottom: 1.5rem;
+    }
+
+    .side-image-container {
+        background-image: 
+            radial-gradient(ellipse 100% 140% at 50% 50%, rgba(83, 83, 83, 0.3) 0%, var(--gradient-color) 100%),
+            var(--side-image);
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        position: sticky; 
+        top: 0;
+    }
+    
+
+    @media (max-width: 1024px) {
+        .article-container {
+            grid-template-columns: 1fr; 
+        }
+        
+        .article-content {
+            padding: 2.5rem 1.5rem;
+        }
+
+        .side-image-container {
+            display: none; 
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="article-container">
+        <article class="article-content">
+            <header class="article-header">
+                <h1 class="main-title">AI dan Manusia</h1>
+                <h2 class="subtitle">Saling Bersaing atau Saling Beriring?</h2>
+            </header>
+            
+            <section class="article-body">
+                <p>
+                    Kecerdasan Buatan (AI) bukan lagi sekadar konsep masa depan; ia telah masuk ke dalam pekerjaan dan keseharian kita. Kehadirannya yang masif dan cepat ini memunculkan satu pertanyaan besar: Apakah AI ini kawan yang membantu kita bertumbuh, atau lawan yang siap merebut peran kita?
+                </p>
+                <p>
+                    Kita kerap mendengar bagaimana AI mendorong efisiensi di berbagai sektor. Namun, efisiensi ini seringkali berujung pada restrukturisasi tim dan mengubah peran manusia. Wajar jika kemudian muncul cap bahwa AI adalah pengganti manusia yang berpotensi mengancam stabilitas para pekerja.
+                </p>
+                <p>
+                    Sebagai contoh, lihatlah sektor administrasi seperti Layanan Pelanggan atau Entri Data. Berbeda dengan otomatisasi mesin yang cenderung repetitif, AI dapat menangani tugas yang lebih kompleks. Dengan database yang ada, model bahasa AI bisa menjawab pertanyaan dan menyortir data dengan cepat dan efisien. Di sinilah letak perspektif pertama: AI sebagai pengganti tugas.
+                </p>
+                <p>
+                    Namun, jika kita melihat dari sudut pandang yang berbeda, AI justru menjadi batu loncatan bagi manusia. Pada lanskap pekerjaan yang lebih tinggi, teknologi seperti machine learning, computer vision, dan Robotic Process Automation (RPA) berfungsi sebagai akselerator. AI mempercepat alur kerja, memberikan berbagai sudut pandang baru, serta membantu membuat purwarupa secara instan, sehingga meningkatkan laju dan kualitas inovasi manusia.
+                </p>
+                <p>
+                    Di sinilah peran unik manusia bersinar. AI, sehebat apa pun, tetaplah algoritma yang beroperasi tanpa pemahaman konteks, empati, atau penilaian etis. Ia bisa gagal dalam tugas yang membutuhkan nuansa atau akal sehat. Manusialah yang berperan sebagai pengawas, pemikir kritis, dan penentu arah untuk memastikan hasil kerja AI tidak hanya cepat, tetapi juga tepat, relevan, dan bertanggung jawab. Kolaborasi inilah yang memungkinkan kita menghasilkan luaran yang jauh lebih kompleks dan eksploratif.
+                </p>
+                <p>
+                    Jadi, apakah AI akan menggantikan manusia? Untuk pekerjaan repetitif dengan kompleksitas rendah, jawabannya adalah iya. Perampingan dan perubahan peran pasti akan terjadi. Namun, ini bukanlah akhir dari peran manusia. Sejarah menunjukkan bahwa teknologi selalu menciptakan peran-peran baru yang lebih bernilai. Manusia akan beralih dari pelaksana tugas menjadi pengawas, ahli strategi, dan penentu keputusan yang memastikan output AI optimal dan akurat.
+                </p>
+                <p>
+                    Pertanyaannya kini bukanlah "apakah AI akan menggantikan kita?", melainkan "apakah Anda siap untuk berkolabolarasi dengannya?"
+                </p>
+            </section>
+        </article>
+
+        <aside class="side-image-container"></aside>
+    </div>
+</body>
+</html>

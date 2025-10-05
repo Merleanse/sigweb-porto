@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Like an Engineer - Blog</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,700&family=Poppins:wght@200;400;700&display=swap" rel="stylesheet">
+
+<style>
+    :root {
+        --bg-image: url('/Blog/Blog 3/Group 48096117.png');
+        --side-image: url('/Blog/Blog 3/Group 48096152.png');
+        --primary-font: 'Poppins', sans-serif;
+        --display-font: 'Playfair Display', serif;
+        --text-color-light: #ffffff;
+        --text-color-dark: #222222;
+        --gradient-color: #DC833F;
+        --shadow-color: rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: var(--primary-font);
+        color: var(--text-color-dark);
+        background-color: #f0f2f5;
+        line-height: 1.8; 
+    }
+
+
+    .article-container {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr; 
+        min-height: 100vh;
+    }
+
+    .article-content {
+        padding: 5rem;
+        background-color: #ffffff;
+    }
+
+    .article-header {
+        margin-bottom: 2.5rem;
+        padding-bottom: 2.5rem;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .main-title {
+        font-family: var(--display-font);
+        font-style: italic;
+        font-weight: 700;
+        font-size: clamp(2.5rem, 5vw, 4rem); 
+        color: var(--gradient-color);
+        margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+        font-weight: 200;
+        font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+        color: #555;
+    }
+    
+    .article-body {
+        font-size: clamp(1rem, 1.1vw, 1.15rem);
+        max-width: 65ch; 
+    }
+    
+    .article-body p {
+        margin-bottom: 1.5rem;
+    }
+
+    .side-image-container {
+        background-image: 
+            radial-gradient(ellipse 100% 140% at 50% 50%, rgba(102,102,102,0.3) 0%, var(--gradient-color) 100%),
+            var(--side-image);
+        background-size: cover;
+        background-position: center;
+        min-height: 100vh;
+        position: sticky; 
+        top: 0;
+    }
+    
+
+    @media (max-width: 1024px) {
+        .article-container {
+            grid-template-columns: 1fr; 
+        }
+        
+        .article-content {
+            padding: 2.5rem 1.5rem;
+        }
+
+        .side-image-container {
+            display: none; 
+        }
+    }
+</style>
+</head>
+<body>
+    <div class="article-container">
+        <article class="article-content">
+            <header class="article-header">
+                <h1 class="main-title">Think Like an Engineer</h1>
+                <h2 class="subtitle">Implementasi Analisis Spasial dalam Pemilihan Tempat Tinggal untuk Meningkatkan Kualitas Hidup</h2>
+            </header>
+            
+            <section class="article-body">
+                <p>
+                    Memilih tempat tinggal adalah salah satu keputusan terbesar dalam hidup, namun seringkali kita melakukannya berdasarkan perasaan, iklan yang menarik, atau saran yang tidak berbasis data. Proses yang emosional ini tak jarang berujung pada penyesalan. Hal ini kontras dengan pendekatan seorang insinyur yang akan mendefinisikan masalah, mengumpulkan data, menganalisis variabel, dan mengoptimalkan hasil. Inilah inti dari Analisis Spasial, sebuah metode untuk membuat keputusan terbaik dengan cara menumpuk "peta-peta" informasi yang berbeda untuk menemukan solusi paling logis.
+                </p>
+                <p>
+                    Pendekatan ini dimulai dengan mengubah keinginan abstrak mengenai "kualitas hidup" menjadi serangkaian parameter yang terukur, layaknya tahap pengumpulan data dalam sebuah proyek. Keinginan seperti "hidup nyaman dan sehat" perlu diterjemahkan menjadi variabel konkret, misalnya: waktu tempuh ke kantor maksimal 45 menit, jarak ke taman atau ruang terbuka hijau tidak lebih dari 1 kilometer, akses ke pasar atau supermarket dapat dijangkau dalam 10 menit, dan yang terpenting, berada di area dengan catatan risiko banjir yang rendah.
+                </p>
+                <p>
+                    Selanjutnya, seorang insinyur akan melakukan akuisisi data untuk setiap parameter tersebut, di mana informasi ini ternyata sangat mudah diakses oleh siapa saja. "Peta" waktu tempuh dapat dibuat dengan fitur "Commute" di Google Maps pada jam sibuk. "Peta" fasilitas seperti sekolah atau rumah sakit bisa didapat dari fitur "Search nearby". Sementara "peta" ruang terbuka hijau bahkan cukup dilihat dari citra satelit. Untuk data krusial seperti risiko bencana, kita bisa merujuk pada portal resmi seperti situs BPBD Kota Surabaya atau portal berita lokal yang kredibel.
+                </p>
+                <p>
+                    Inti dari metode 'Think Like an Engineer' ini adalah melakukan analisis tumpang susun atau overlay terhadap semua "peta" informasi yang telah dikumpulkan. Bayangkan Anda mencetak setiap peta—peta waktu tempuh, peta fasilitas, peta bebas banjir—di atas plastik transparan lalu menumpuknya. Area di mana semua kriteria Anda terpenuhi secara logis akan menjadi area yang paling optimal.
+                </p>
+                <p>
+                    Sebagai studi kasus sederhana di Surabaya, bayangkan seorang pekerja di kawasan Basuki Rahmat butuh waktu tempuh di bawah 45 menit, akses mudah ke Suroboyo Bus, dan lokasi anti banjir. Dengan analisis spasial sederhana, kita bisa langsung mengeliminasi area Surabaya Utara karena potensi rob dan beberapa area di Timur karena waktu tempuh, sehingga pencarian dapat difokuskan pada area Tengah dan Selatan yang paling memenuhi kriteria.
+                </p>
+                <p>
+                    Pada akhirnya, pendekatan 'Think Like an Engineer' bukan berarti menghilangkan peran emosi, melainkan melengkapinya dengan struktur data dan logika yang kuat. Dengan menerapkan prinsip analisis spasial, kita tidak lagi sekadar memilih rumah secara pasif. Kita secara proaktif merekayasa sebuah lingkungan yang dirancang untuk mendukung kualitas hidup yang lebih baik setiap harinya, karena keputusan terbaik selalu lahir dari proses yang baik.
+                </p>
+            </section>
+        </article>
+
+        <aside class="side-image-container"></aside>
+    </div>
+</body>
+</html>
